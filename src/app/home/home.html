@@ -1,0 +1,11 @@
+<select id="genre-select" (change)="onGenreChange($event)">
+  <option value="">All Genres</option>
+  @for(genre of genres; track genre.id) {
+    <option [value]="genre.id">{{ genre.name }}</option>
+  }
+</select>
+<ul>
+  @for(movie of movies; track movie.id) {
+    <li>{{movie.title}} -- {{movie.release_date}}</li>
+  }
+</ul>
