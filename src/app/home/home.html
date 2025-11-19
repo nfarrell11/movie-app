@@ -1,11 +1,33 @@
-<select id="genre-select" (change)="onGenreChange($event)">
-  <option value="">All Genres</option>
-  @for(genre of genres; track genre.id) {
-    <option [value]="genre.id">{{ genre.name }}</option>
-  }
-</select>
-<ul>
-  @for(movie of movies; track movie.id) {
-    <li>{{movie.title}} -- {{movie.release_date}}</li>
-  }
+<section class="controls">
+  <label for="genre-select">Genre:</label>
+  <select id="genre-select" (change)="onGenreChange($event)">
+    <option value="">All Genres</option>
+    @for(genre of genres; track genre.id) {
+      <option [value]="genre.id">{{ genre.name }}</option>
+    }
+  </select>
+</section>
+<section class="results">
+  <h2>Movies from the last 30 days:</h2>
+  <ul>
+    @for(movie of movies; track movie.id) {
+      <li>{{movie.title}} -- {{movie.release_date}}</li>
+    }
 </ul>
+</section>
+<section class="pagination">
+  <button
+    (click)="prevPage()"
+    [disabled]="!canGoPrev">
+    Previous
+  </button>
+  <span>
+    Page {{ currentPage }} of {{ totalPages }}
+  </span>
+  <button
+    (click)="nextPage()"
+    [disabled]="!canGoNext">
+    Next
+  </button>
+</section>
+

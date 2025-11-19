@@ -1,0 +1,11 @@
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pagination button[disabled] {
+  opacity: 0.5;
+  cursor: default;
+}

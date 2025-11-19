@@ -31,6 +31,9 @@ export interface GenreResponse {
 @Injectable({
   providedIn: 'root',
 })
+/**
+ * MovieService is the service layer between our application and the TMDB API.
+ */
 export class MovieService {
   constructor(private _http: HttpClient) {};
 
