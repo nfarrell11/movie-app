@@ -1,6 +1,14 @@
 # MovieApp
 
+This project is an Angular 17+ application that integrates with the TMDB (The Movie Database) API to display movies released in the last 30 days.
+It includes dynamic genre filtering, pagination, a dedicated MovieService for API communication, and standalone Angular components.
+
+This project was created as part of the BCIT COMP 2909 course and is included here as part of a professional developer portfolio.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+
+Author: Nick Farrell
+Version: 0.1.0 (2025)
 
 ## Development server
 
