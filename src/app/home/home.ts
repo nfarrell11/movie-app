@@ -76,6 +76,7 @@ export class Home {
     }
     const newPage = this.currentPage - 1;
     this.loadMovies(this.selectedGenreId, newPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   // increments the page (+1) and loads a new array of movies to display
@@ -83,8 +84,8 @@ export class Home {
     if(!this.canGoNext) {
       return;
     }
-
     const newPage = this.currentPage + 1;
     this.loadMovies(this.selectedGenreId, newPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
