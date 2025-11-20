@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Movie } from '../movie.service';
 
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/o/w342';
+const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w342';
 @Component({
   selector: 'movie-card',
   imports: [CommonModule],
