@@ -7,23 +7,27 @@
     }
   </select>
 </section>
+
 <section class="results">
   <h2>Movies from the last 30 days:</h2>
-  <ul>
+  <section class="movie-grid">
     @for(movie of movies; track movie.id) {
-      <li>{{movie.title}} -- {{movie.release_date}}</li>
+      <movie-card [movie]="movie"></movie-card>
     }
-</ul>
+  </section>
 </section>
+
 <section class="pagination">
   <button
     (click)="prevPage()"
     [disabled]="!canGoPrev">
     Previous
   </button>
+
   <span>
     Page {{ currentPage }} of {{ totalPages }}
   </span>
+
   <button
     (click)="nextPage()"
     [disabled]="!canGoNext">

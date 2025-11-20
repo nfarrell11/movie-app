@@ -1,1 +1,11 @@
-<p>movie-card works!</p>
+<article class="movie-card">
+  <div class="poster">
+    <img [src]="posterUrl" [alt]="movie.title" />
+  </div>
+  <!-- TODO implement a placeholder image if no posterUrl is found-->
+  <div>
+    <h3 class="title">{{movie.title}}</h3>
+    <p class="date">Released: {{ movie.release_date }}</p>
+    <p class="overview">{{ movie.overview }}</p>
+  </div>
+</article>

@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Genre, Movie, MovieService } from '../movie.service';
+import { MovieCard } from '../movie-card/movie-card';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MovieCard],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
